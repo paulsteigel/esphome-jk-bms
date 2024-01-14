@@ -69,3 +69,63 @@ sensor:
     accuracy_decimals: 3
     filters:
       - multiply: 0.001
+
+  # 0x0000    0    UINT16    2    R    CellVol0    mV
+  # 0x0002    2    UINT16    2    R    CellVol1    mV
+  # 0x0004    4    UINT16    2    R    CellVol2    mV
+  # 0x0006    6    UINT16    2    R    CellVol3    mV
+  # 0x0008    8    UINT16    2    R    CellVol4    mV
+  # 0x000A   10    UINT16    2    R    CellVol5    mV
+  # 0x000C   12    UINT16    2    R    CellVol6    mV
+  # 0x000E   14    UINT16    2    R    CellVol7    mV
+  # 0x0010   16    UINT16    2    R    CellVol8    mV
+  # 0x0012   18    UINT16    2    R    CellVol9    mV
+  # 0x0014   20    UINT16    2    R    CellVol10   mV
+  # 0x0016   22    UINT16    2    R    CellVol11   mV
+  # 0x0018   24    UINT16    2    R    CellVol12   mV
+  # 0x001A   26    UINT16    2    R    CellVol13   mV
+  # 0x001C   28    UINT16    2    R    CellVol14   mV
+  # 0x001E   30    UINT16    2    R    CellVol15   mV
+  # 0x0020   32    UINT16    2    R    CellVol16   mV
+  # 0x0022   34    UINT16    2    R    CellVol17   mV
+  # 0x0024   36    UINT16    2    R    CellVol18   mV
+  # 0x0026   38    UINT16    2    R    CellVol19   mV
+  # 0x0028   40    UINT16    2    R    CellVol20   mV
+  # 0x002A   42    UINT16    2    R    CellVol21   mV
+  # 0x002C   44    UINT16    2    R    CellVol22   mV
+  # 0x002E   46    UINT16    2    R    CellVol23   mV
+  #
+  # 0x0030   48    UINT16    2    R    CellVol24   mV
+  # 0x0032   50    UINT16    2    R    CellVol25   mV
+  # 0x0034   52    UINT16    2    R    CellVol26   mV
+  # 0x0036   54    UINT16    2    R    CellVol27   mV
+  # 0x0038   56    UINT16    2    R    CellVol28   mV
+  # 0x003A   58    UINT16    2    R    CellVol29   mV
+  # 0x003C   60    UINT16    2    R    CellVol30   mV
+  # 0x003E   62    UINT16    2    R    CellVol31   mV
+  # 0x0040   64    UINT32    4    R    CellStatus    (each bit indicates a attached cell)
+  # 0x0044   68    UINT16    2    R    CellVolAverage    mV
+  # 0x0046   70    UINT16    2    R    CellVoltageDifferenceMax    mV
+  # 0x0048   72    UINT8/UINT8 2  R    MaxVolCellNbr / MinVolCellNbr
+  # 0x004A   74    UINT16    2    R    CellWireRes0    mΩ
+  # 0x004C   76    UINT16    2    R    CellWireRes1    mΩ
+  # 0x004E   78    UINT16    2    R    CellWireRes2    mΩ
+  # 0x0050   80    UINT16    2    R    CellWireRes3    mΩ
+  # 0x0052   82    UINT16    2    R    CellWireRes4    mΩ
+  # 0x0054   84    UINT16    2    R    CellWireRes5    mΩ
+  # 0x0056   86    UINT16    2    R    CellWireRes6    mΩ
+  # 0x0058   88    UINT16    2    R    CellWireRes7    mΩ
+  # 0x005A   90    UINT16    2    R    CellWireRes8    mΩ
+  # 0x005C   92    UINT16    2    R    CellWireRes9    mΩ
+  # 0x005E   94    UINT16    2    R    CellWireRes10   mΩ
+  # 0x0060   96    UINT16    2    R    CellWireRes11   mΩ
+  # 0x0062   98    UINT16    2    R    CellWireRes12   mΩ
+  # 0x0064   100   UINT16    2    R    CellWireRes13   mΩ
+  # 0x0066   102   UINT16    2    R    CellWireRes14   mΩ
+  # 0x0068   104   UINT16    2    R    CellWireRes15   mΩ
+  # 0x006A   106   UINT16    2    R    CellWireRes16   mΩ
+  # 0x006C   108   UINT16    2    R    CellWireRes17   mΩ
+  # 0x006E   110   UINT16    2    R    CellWireRes18   mΩ
+  # 0x0070   112   UINT16    2    R    CellWireRes19   mΩ
+  # 0x0072   114   UINT16    2    R    CellWireRes20   mΩ
+  # 0x0074   116   UINT16    2    R    CellWireRes21   mΩ
