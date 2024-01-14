@@ -129,3 +129,46 @@ sensor:
   # 0x0070   112   UINT16    2    R    CellWireRes19   mΩ
   # 0x0072   114   UINT16    2    R    CellWireRes20   mΩ
   # 0x0074   116   UINT16    2    R    CellWireRes21   mΩ
+  # 0x0074   116   UINT16    2    R    CellWireRes21   mΩ
+  # 0x0076   118   UINT16    2    R    CellWireRes22   mΩ
+  # 0x0078   120   UINT16    2    R    CellWireRes23   mΩ
+  # 0x007A   122   UINT16    2    R    CellWireRes24   mΩ
+  # 0x007C   124   UINT16    2    R    CellWireRes25   mΩ
+  # 0x007E   126   UINT16    2    R    CellWireRes26   mΩ
+  # 0x0080   128   UINT16    2    R    CellWireRes27   mΩ
+  # 0x0082   130   UINT16    2    R    CellWireRes28   mΩ
+  # 0x0084   132   UINT16    2    R    CellWireRes29   mΩ
+  # 0x0086   134   UINT16    2    R    CellWireRes30   mΩ
+  # 0x0088   136   UINT16    2    R    CellWireRes31   mΩ
+  # 0x008A   138    INT16    2    R    TempMos         0.1 °C
+  # 0x008C   140   UINT32    4    R    CellWireResSta  Bit per Cell
+  # 0x0090   144   UINT32    4    R    BatVol          mV
+  # 0x0094   148   UINT32    4    R    BatWatt         mW
+  # 0x0098   152    INT32    4    R    BatCurrent      mA
+  # 0x009C   156    INT16    2    R    TempBat 1       0.1 °C
+  # 0x009E   158    INT16    2    R    TempBat 2       0.1 °C
+  # 0x00A0   160   UINT32    4    R    AlarmBitmask
+  # 0x00A4   164    INT16    2    R    BalanCurrent    mA
+  # 0x00A6   166 UINT8+UINT8 2    R    BalanStatatus (2:放电; 1:充电 ; 0:关闭) / SOCStateOfcharge %
+  # 0x00A8   168    INT32    2    R    SOCCapRemain    mAH
+  # 0x00AC   172   UINT32    4    R    SOCFullChargeCap    mAH
+  # 0x00B0   176   UINT32    4    R    SOCCycleCount   次
+  # 0x00B4   180   UINT32    4    R    SOCCycleCap     mAH
+  # 0x00B8   184 UINT8+UINT8 2    R    StateOfHealth % / Precharge stats (1:打开 ; 0:关闭)
+  # 0x00BA   186   UINT16    2    R    UserAlarm
+  # 0x00BC   188   UINT32    4    R    RunTime         S
+  # 0x00C0   192 UINT8+UINT8 Charge (1:打开 ; 0:关闭) / Discharge (1:打开 ; 0:关闭)
+  # 0x00C2   194   UINT16    2    R    UserAlarm2
+  # 0x00C4   196   UINT16    2    R    TimeDcOCPR      S
+  # 0x00C6   198   UINT16    2    R    TimeDcSCPR      S
+  # 0x00C8   200   UINT16    2    R    TimeCOCPR       S
+  # 0x00CA   202   UINT16    2    R    TimeCSCPR       S
+  # 0x00CC   204   UINT16    2    R    TimeUVPR        S
+  # 0x00CE   206   UINT16    2    R    TimeOVPR        S
+  # 0x00D0   208 UINT8+UINT8 2    R    AbsentBitmask (Bit0: MOS TempSensorAbsent, Bit1: BATTempSensor1Absent, Bit2: BATTempSensor2Absent, Bit4: BATTempSensor4Absent, Bit5: BATTempSensor5Absent) / Heating
+  # 0x00D2   210   UINT16    2    R    Reserved
+  # 0x00D4   212   UINT16    2    R    TimeEmergency   S
+  # 0x00D6   214   UINT16    2    R    BatCurCorrect
+  # 0x00D8   216   UINT16    2    R    VolChargCur     mV
+  # 0x00DA   218   UINT16    2    R    VolDischargCur  mV
+  
