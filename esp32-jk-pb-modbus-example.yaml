@@ -171,4 +171,3 @@ sensor:
   # 0x00D6   214   UINT16    2    R    BatCurCorrect
   # 0x00D8   216   UINT16    2    R    VolChargCur     mV
   # 0x00DA   218   UINT16    2    R    VolDischargCur  mV
-  
