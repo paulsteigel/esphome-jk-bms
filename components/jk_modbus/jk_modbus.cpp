@@ -119,7 +119,7 @@ float JkModbus::get_setup_priority() const {
 }
 
 void JkModbus::send(uint8_t function, uint8_t address, uint8_t value) {
-  uint8_t frame[22];
+  uint8_t frame[21];
   frame[0] = 0x4E;      // start sequence
   //frame[1] = 0x57;      // start sequence
   frame[1] = 0x00;      // data length lb
@@ -157,32 +157,32 @@ void JkModbus::write_register(uint8_t address, uint8_t value) {
 }
 
 void JkModbus::read_registers() {
-  uint8_t frame[21];
+  uint8_t frame[20];
   frame[0] = 0x4E;                         // start sequence
-  frame[1] = 0x57;                         // start sequence
-  frame[2] = 0x00;                         // data length lb
-  frame[3] = 0x13;                         // data length hb
+  //frame[1] = 0x57;                         // start sequence
+  frame[1] = 0x00;                         // data length lb
+  frame[2] = 0x13;                         // data length hb
+  frame[3] = 0x00;                         // bms terminal number
   frame[4] = 0x00;                         // bms terminal number
   frame[5] = 0x00;                         // bms terminal number
   frame[6] = 0x00;                         // bms terminal number
-  frame[7] = 0x00;                         // bms terminal number
-  frame[8] = FUNCTION_READ_ALL_REGISTERS;  // command word: 0x01 (activation), 0x02 (write), 0x03 (read), 0x05
+  frame[7] = FUNCTION_READ_ALL_REGISTERS;  // command word: 0x01 (activation), 0x02 (write), 0x03 (read), 0x05
                                            // (password), 0x06 (read all)
-  frame[9] = FRAME_SOURCE_GPS;             // frame source: 0x00 (bms), 0x01 (bluetooth), 0x02 (gps), 0x03 (computer)
-  frame[10] = 0x00;                        // frame type: 0x00 (read data), 0x01 (reply frame), 0x02 (BMS active upload)
-  frame[11] = ADDRESS_READ_ALL;            // register: 0x00 (read all registers), 0x8E...0xBF (holding registers)
+  frame[8] = FRAME_SOURCE_GPS;             // frame source: 0x00 (bms), 0x01 (bluetooth), 0x02 (gps), 0x03 (computer)
+  frame[9] = 0x00;                        // frame type: 0x00 (read data), 0x01 (reply frame), 0x02 (BMS active upload)
+  frame[10] = ADDRESS_READ_ALL;            // register: 0x00 (read all registers), 0x8E...0xBF (holding registers)
+  frame[11] = 0x00;                        // record number
   frame[12] = 0x00;                        // record number
   frame[13] = 0x00;                        // record number
   frame[14] = 0x00;                        // record number
-  frame[15] = 0x00;                        // record number
-  frame[16] = 0x68;                        // end sequence
-  auto crc = chksum(frame, 17);
+  frame[15] = 0x68;                        // end sequence
+  auto crc = chksum(frame, 16);
+  frame[16] = 0x00;  // crc unused
   frame[17] = 0x00;  // crc unused
-  frame[18] = 0x00;  // crc unused
-  frame[19] = crc >> 8;
-  frame[20] = crc >> 0;
+  frame[18] = crc >> 8;
+  frame[19] = crc >> 0;
 
-  this->write_array(frame, 21);
+  this->write_array(frame, 20);
   this->flush();
 }
 
