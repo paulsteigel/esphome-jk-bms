@@ -15,7 +15,7 @@ static const uint8_t FUNCTION_READ_ALL_REGISTERS = 0x06;
 
 static const uint8_t ADDRESS_READ_ALL = 0x00;
 
-static const uint8_t FRAME_SOURCE_GPS = 0x01;
+static const uint8_t FRAME_SOURCE_GPS = 0x00;
 
 void JkModbus::loop() {
   const uint32_t now = millis();
